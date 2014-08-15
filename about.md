@@ -1,11 +1,29 @@
 ---
-layout: page
+layout: default
 title: About
+cover: cave-house.jpg
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<div class="content" id="home">
+  <div id="sidebar-button">
+    <img src="/images/sidebar-button.png">
+  </div>
+  <div id="post-info">
+    <div id="cover-photo-container">
+      <img id="cover-photo" src="/images/{{ page.cover }}">
+    </div>
+    <div id="info-container">
+      <h1 id="title">About</h1>
+    </div>
+  </div>
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+  <div class="post">
+    <p>My name is Dennis woodruff and I am a developer, interested in languages that make life easier or more interesting.</p>
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+  </div>
+  <div class="colophon">
+    <p>
+    </p>
+  </div>
+</div>
