@@ -20,28 +20,27 @@ it already exists.
 
 ## Improved solution
 
-I made a small change to the script as follows:
+I also realised that I was suppressing output when I didn't need to. I had added the -x switch to the shebang line, cause bash to echo every command. After removing the switch I then got rid of the redirection to /dev/null
 
 {% highlight Bash %}
-#!/bin/bash -x
+#!/bin/bash
 # open or create text file for today
 # uses or creates folder for current year and month
-{
-  rootPath=~/Copy/Writing
-  thisYear=$rootPath/$(date +"%Y")
-  thisMonth=$thisYear/$(date +"%m")
-  fileName=$thisMonth/$(date +"%d")-$(date +"%B").txt
 
-  mkdir -p $thisMonth
+rootPath=~/Copy/Writing
+thisYear=$rootPath/$(date +"%Y")
+thisMonth=$thisYear/$(date +"%m")
+fileName=$thisMonth/$(date +"%d")-$(date +"%B").txt
 
-  if [ ! -e $fileName ]
-  then
-    touch "$fileName"
-  fi
+mkdir -p $thisMonth
 
-  open -a WriteRoom $fileName
+if [ ! -e $fileName ]
+then
+  touch "$fileName"
+fi
 
-} &> /dev/null
+echo "Opening $fileName in WriteRoom..."
+open -a WriteRoom $fileName
 
 {% endhighlight %}
 
