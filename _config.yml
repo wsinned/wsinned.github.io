@@ -1,12 +1,13 @@
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Notes to Self
+name: Notes to Self
+email: denniswoodruff@gmail.com
+description: "My blog is a collection of notes to myself. Mainly things I would otherwise forget very quickly. Now all I have to do is remember where my blog is."
 baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://notes-to-self.denniswoodruff.org.uk"
+twitter_username: wsinned
+github_username:  wsinned
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+highlight: pygments
