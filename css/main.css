@@ -216,15 +216,15 @@ a:hover {
 }
 
 .sidebar {
-  float: left;
   width: 14%;
-  padding-left: 11em;
+  padding-left: 3em;
   padding-right: 2.125em;
-  border-right: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
 }
 
 .content {
   padding-left: 2.125em;
+  float: left;
 }
 
 .header {
