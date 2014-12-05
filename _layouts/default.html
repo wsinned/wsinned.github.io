@@ -1,64 +1,101 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js">
   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="google-site-verification" content="cT7nnLaWDRpOX7uIi8Oh5ePQNtCSmFLAXdNXtU32VF8" />
-      <title>Notes to Self - {{ page.title }}</title>
-      <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="cT7nnLaWDRpOX7uIi8Oh5ePQNtCSmFLAXdNXtU32VF8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }} - {{ site.name }}</title>
+    <meta name="description" content="{{ page.title }} - {{ site.name }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="{{ page.keywords }}, {{ site.keywords }}" />
 
-      <!-- syntax highlighting CSS -->
-      <link rel="stylesheet" href="/css/syntax.css">
+    <!-- CSS  Get: http://www.google.com/fonts/
+    http://stackoverflow.com/questions/7985081/how-to-deploy-a-jekyll-site-locally-with-css-js-and-background-images-included
+    ================================================== -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,200,700" rel="stylesheet" type="text/css">
+    <!-- Fount Awesome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-      <!-- Custom CSS -->
-      <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/style.css" />
 
-      <!-- Responsive CSS -->
-      <link rel="stylesheet" href="/css/responsive.css">
+    <!-- Ah, the favicon.
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico">
 
-      <!-- Google Fonts -->
-      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
+    <!-- Open Graph: https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content/
+    Twitter: https://dev.twitter.com/docs/cards/types/summary-card
+    ============================== -->
+    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:site_name" content=" - {{ site.name }}"/>
+    <meta property="og:url" content=" - {{ site.url }}"/>
+    <meta property="og:description" content="{{ page.description }}"/>
+    <meta property="og:image" content="{{ page.imageurl }}"/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.twitter }}">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ page.imageurl }}">
+  
+    <!-- modernizr
+    ================================================== -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-    <div class="site">
-        {{ content }}
-      <div class="sidebar" id="sidebar">
-        <div class="header">
-          <h1 class="title"><a href="/"><img id="logo" src="/images/notes.jpg"></a></h1>
-          <span class="tagline">{{ site.name }}</span>
+     
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+        <section class="right show-for-medium-up mam">
+            <ul class="inline-list">
+                {% include nav.html %}
+            </ul>
+        </section>
+      </div>
+            <h1><a href="{{ site.url }}">{{ site.brand }}</a></h1>
+      <hr/>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="large-9 columns" role="content">
+              {{ content }} 
+    </div>
+ 
+    <aside class="large-3 columns">
+      <h5>Categories</h5>
+      <ul class="side-nav">
+        <li><a href="#">News</a></li>
+        <li><a href="#">Code</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Fun</a></li>
+        <li><a href="#">Weasels</a></li>
+      </ul>
+ 
+      <div class="panel">
+        <h5>Featured</h5>
+        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+        <a href="#">Read More →</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Copyright no one at all. Go to town.</p>
         </div>
-        <div class="posts">
-          <ul class="posts-list">
-            {% for post in site.posts %}
-              <li class="post-link">
-                <a class="post-title" href="{{ post.url }}">
-                  <span class="post-date">{{ post.date | date_to_string }}</span>
-                  {{ post.title }}
-                </a>
-              </li>
-            {% endfor %}
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
           </ul>
         </div>
-        <div class="footer">
-          <p>I am Dennis Woodruff, a developer interested in languages that make life easier or more interesting.
-          My current favourites are C#, F#, Ruby, Elixir and I must confess to a love-hate relationship with JavaScript.
-          </p>
-        </div>
-        <div class="footer">
-          <span id="footer-links">
-            {% if site.twitter_username %}
-              <a href="https://twitter.com/{{ site.twitter_username }}"class="footer-link">Twitter</a> <span class="separator">&bull;</span>
-            {% endif %}
-            {% if site.github_username %}
-              <a href="https://github.com/{{ site.github_username }}" class="footer-link">GitHub</a>
-            {% endif %}
-          </span>
-        </div>
       </div>
-
-
     </div>
-    <script src="/scripts/responsive.js" type="text/javascript"></script>
-  </body>
+  </footer>
+      </body>
 </html>

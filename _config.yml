@@ -2,7 +2,6 @@ title: Notes to Self
 name: "So I don't forget"
 email: denniswoodruff@gmail.com
 description: "My blog is a collection of notes to myself. Mainly things I would otherwise forget very quickly. Now all I have to do is remember where my blog is."
-baseurl: ""
 url: "http://notes-to-self.denniswoodruff.org.uk"
 twitter_username: wsinned
 github_username:  wsinned
@@ -11,3 +10,12 @@ github_username:  wsinned
 markdown: kramdown
 permalink: pretty
 highlight: pygments
+
+brand : DW
+keyword: 
+imageurl: http://www.daigo.org/wordpress/wp-content/themes/daigo_org-theme-2013/img/glasses.png
+twitter : DaigoFuji
+github : DaigoFuji
+author: Dennis Woodruff
+# analytics: UA-8418273-8
+year: 2014
