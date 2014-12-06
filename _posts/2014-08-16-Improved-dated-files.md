@@ -20,7 +20,7 @@ it already exists.
 
 ## Improved solution
 
-I also realised that I was suppressing output when I didn't need to. I had added the -x switch to the shebang line, cause bash to echo every command. After removing the switch I then got rid of the redirection to /dev/null
+I also realised that I was suppressing output when I didn't need to. I had added the -x switch to the shebang line, causing bash to echo every command. After removing the switch I then got rid of the redirection to /dev/null
 
 {% highlight Bash %}
 #!/bin/bash

@@ -7,7 +7,7 @@ categories: scripting
 ---
 
 
-## <s>Lazy</s> Good Coders Automate Everything
+<s>Lazy</s> Good Coders Automate Everything
 
 I have an aversion to any sort of repetitive task. I generally start to worry that I will not repeat the task in exactly the same way, resulting in minor variations from the procedure. Inconsistency bothers me. That probably says a lot about me. Probably more than I should be telling...
 
