@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 
+title: Draft Post
 cover: cave-house.jpg
-date: 2014-
+date: 2000-01-01
 categories: 
 ---
 
