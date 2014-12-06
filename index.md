@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Welcome!
-description: This is my site. Welcome.
+title: Notes to self
 ---
 
 {% assign page = site.posts.first %}

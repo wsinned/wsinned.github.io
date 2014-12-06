@@ -17,6 +17,7 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/syntax.css" />
 
     <!-- Ah, the favicon.
     ================================================== -->
@@ -52,6 +53,7 @@
         </section>
       </div>
             <h1><a href="{{ site.url }}">{{ site.brand }}</a></h1>
+            <h2>{{site.title}}</h2>
       <hr/>
     </div>
   </div>
@@ -62,20 +64,9 @@
     </div>
  
     <aside class="large-3 columns">
-      <h5>Categories</h5>
-      <ul class="side-nav">
-        <li><a href="#">News</a></li>
-        <li><a href="#">Code</a></li>
-        <li><a href="#">Design</a></li>
-        <li><a href="#">Fun</a></li>
-        <li><a href="#">Weasels</a></li>
-      </ul>
- 
-      <div class="panel">
-        <h5>Featured</h5>
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-        <a href="#">Read More →</a>
-      </div>
+      <img class="note right" src="images/notes.jpg" />
+      <p>{{site.description}}</p>
+      {% include posts.html %}
     </aside>
   </div>
 
@@ -84,14 +75,12 @@
       <hr/>
       <div class="row">
         <div class="large-6 columns">
-          <p>© Copyright no one at all. Go to town.</p>
+          <p>© Copyright {{ site.year }} Dennis Woodruff </p>
         </div>
         <div class="large-6 columns">
           <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
+            <li><a href="{{ site.twitter }}">Twitter</a></li>
+            <li><a href="{{ site.github }}">Github</a></li>
           </ul>
         </div>
       </div>
