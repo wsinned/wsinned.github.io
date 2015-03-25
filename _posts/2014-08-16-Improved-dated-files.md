@@ -22,31 +22,10 @@ it already exists.
 
 I also realised that I was suppressing output when I didn't need to. I had added the -x switch to the shebang line, causing bash to echo every command. After removing the switch I then got rid of the redirection to /dev/null
 
-{% highlight Bash %}
-#!/bin/bash
-# open or create text file for today
-# uses or creates folder for current year and month
-
-rootPath=~/Copy/Writing
-thisYear=$rootPath/$(date +"%Y")
-thisMonth=$thisYear/$(date +"%m")
-fileName=$thisMonth/$(date +"%d")-$(date +"%B").txt
-
-mkdir -p $thisMonth
-
-if [ ! -e $fileName ]
-then
-  touch "$fileName"
-fi
-
-echo "Opening $fileName in WriteRoom..."
-open -a WriteRoom $fileName
-
-{% endhighlight %}
+{% gist wsinned/4eb0a6262b2550ed3d6b %}
 
 ## Result!
 
 This is simpler and still does exactly what I wanted. A single command
 in my ~/bin folder means I can start or continue today's entry from
 anywhere in the shell whenever I feel the need to write.
-

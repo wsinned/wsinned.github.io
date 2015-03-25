@@ -17,36 +17,7 @@ After writing two blog posts about my automated writing workflow, I realised tha
 
 So I applied the same logic to the blogging that I had applied to the writing and came up with this
 
-{% highlight Bash %}
-
-#!/bin/bash
-# open or create blog post for today
-# uses or creates markdown file for current date with supplied title.
-
-rootPath=~/code/blog/
-draftPath=$rootPath/_drafts
-postPath=$rootPath/_posts
-
-if [ $# -eq 0 ]
-then
-  echo "No post name specified. Current drafts are:"
-  ls $draftPath
-  exit 1
-fi
-
-thisYear=$postPath/$(date +"%Y")
-thisMonth=$thisYear-$(date +"%m")
-fileName=$thisMonth-$(date +"%d")-$1.md
-
-if [ ! -e $fileName ]
-then
-  cp $draftPath/new-post.md $fileName
-fi
-
-echo "Opening $fileName in WriteRoom..."
-open -a WriteRoom $fileName
-
-{% endhighlight %}
+{% gist wsinned/fa635d1ba5c333a33352 %}
 
 <br/>
 
@@ -57,4 +28,3 @@ Now I have a nifty  method of getting a new post up and running.
 {% highlight Bash %}
 ~ new-post my-post-title
 {% endhighlight %}
-
