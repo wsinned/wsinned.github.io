@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/note/manjaro-cheatsheet/</loc>
+    <loc>https://denniswoodruff.uk/note/manjaro-cheatsheet/</loc>
     <lastmod>2020-05-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/note/</loc>
+    <loc>https://denniswoodruff.uk/note/</loc>
     <lastmod>2020-05-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://denniswoodruff.uk/</loc>
     <lastmod>2020-05-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://denniswoodruff.uk/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://denniswoodruff.uk/tags/</loc>
   </url>
   
 </urlset>
