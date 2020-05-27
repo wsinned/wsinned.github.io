@@ -22,7 +22,7 @@ Here is my reminder page while I get used to installing using pacman insteat of 
 Pacman Update sources:
 sudo pacman -Syy Upgrade packages:
 sudo pacman -Syu Install package (ensuring system is up to date first to avoid breaking):
-sudo pacman -Syu package_1 package_2 Install package (Don&amp;rsquo;t do this!)1:
+sudo pacman -Syu package_1 package_2 Install package Don&amp;rsquo;t do this! 1:
 sudo pacman -S package_1 package_2 Remove package:</description>
     </item>
     
