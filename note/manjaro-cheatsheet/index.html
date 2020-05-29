@@ -135,7 +135,11 @@
 </code></pre></div><p>Remove package and unused dependencies:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo pacman -Rs package
 </code></pre></div><p>Remove package, unused dependencies and config:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo pacman -Rs package
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo pacman -Rsc package
+</code></pre></div><p>List unneeded packages</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo pacman -Qdt
+</code></pre></div><p>Remove unneeded packages</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo pacman -Rns <span style="color:#66d9ef">$(</span>sudo pacman -Qdtq<span style="color:#66d9ef">)</span>
 </code></pre></div><section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
